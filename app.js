@@ -19,6 +19,11 @@ async function startAnalysis() {
         return;
     }
 
+    // Clear previous results
+    document.getElementById('results').innerHTML = '';
+
+    // Perform SEO analysis
     await fetchPageSpeedInsights(url);
-    // Call other analysis functions here
+    await analyzeMetaTags(url);
+    // Call additional analysis functions here
 }
